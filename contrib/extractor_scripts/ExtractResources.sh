@@ -91,7 +91,8 @@ then
   echo "How many CPUs should be used for extracting mmaps? (1, 2, 4, 8)"
   read line
   echo
-  if [ $line -eq 1 ] || [ $line -eq 2 ] || [ $line -eq 4 ] || [ $line -eq 8 ]; then
+  if [[ ($line == 1) || ($line == 2) || ($line == 4) || ($line == 8) ]]
+  then
     NUM_CPU=$line
   else
     echo "Only numbers 1,2,4 and 8 are supported!"
